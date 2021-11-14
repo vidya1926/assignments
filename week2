@@ -1,0 +1,146 @@
+Week 2 / Day 1 / Assignments 
+
+Test case 1:
+
+Open the browser
+Load the URL
+Maximize the browser
+Enter UserName
+Enter Password
+Click Login
+Click CRM/SFA
+Click Contacts Tab
+Click Create Contact
+Type First Name
+Type Last Name
+Click Create Contact Button
+Print the first name and browser title 
+Close the browser
+
+
+Test case 2:
+
+Open the browser
+Load the URL
+Maximize the browser
+Enter UserName
+Enter Password
+Click Login
+Click CRM/SFA
+Click Contacts Tab
+Click Find Contacts
+Click Email Tab
+Type email as babu@testleaf.com
+Click Find Contacts
+Close the browser
+
+
+
+week2/day2: Assignments
+
+Assignment:1
+FaceBook:
+================================
+// Step 1: Download and set the path 
+// Step 2: Launch the chromebrowser
+// Step 3: Load the URL https://en-gb.facebook.com/
+// Step 4: Maximise the window
+// Step 5: Add implicit wait
+// Step 6: Click on Create New Account button
+// Step 7: Enter the first name
+// Step 8: Enter the last name
+// Step 9: Enter the mobile number
+// Step 10: Enterthe password
+// Step 11: Handle all the three drop downs
+// Step 12: Select the radio button "Female" 
+            ( A normal click will do for this step) 
+
+Assignment:2
+==================================================
+SalesForce:
+// Step 1: Download and set the path 
+// Step 2: Launch the chromebrowser
+// Step 3: Load the URL 
+           https://www.salesforce.com/in/form/signup/freetrial-sales/?d=70130000000Enyk
+// Step 4: Maximise the window
+// Step 5: Add implicit wait
+// Step 6: Fill in all the text boxes
+// Step 7: Handle all the dropdowns
+// Step 8: Click the check box
+// Step 9: Close the browser
+*Note: No need click Start my freeTrial
+
+Assignment:3
+=====================
+https://github.com/TestLeafPages/SeleniumAssignments/tree/master/week2/day2.assignments
+   Complete all 4 assignments in this link
+        
+Assignment:4
+===================
+1. Load url "https://acme-test.uipath.com/login"
+2. Enter email as "kumar.testleaf@gmail.com"
+3. Enter Password as "leaf@12"
+4. Click login button
+5. Get the title of the page and print
+6. Click on Log Out
+7. Close the browser (use -driver.close())
+======================
+optional:
+https://www.opencart.com/index.php?route=account/register
+	   
+Assignment:6
+========================
+LeafGround Assignments
+*******
+**Note : Kindly refer the video attached to do the following assignments
+
+http://leafground.com/pages/Edit.html
+http://leafground.com/pages/Button.html
+http://leafground.com/pages/Link.html
+http://leafground.com/pages/Image.html
+http://leafground.com/pages/Dropdown.html
+http://leafground.com/pages/radio.html
+http://leafground.com/pages/checkbox.html
+[1:40 pm, 07/11/2021] BabusirTl: Exceptions 
+
+1) NoSuchElementException --> This means the element that you are looking for 
+does not exist in the browser DOM. The reasons could be
+        a) Element is removed by the developer
+        b) The locator changed or did not write good locator
+        c) Web Page did not load correctly
+
+    How to fix?
+    Check the locator on the dom again and confirm its presence
+
+2) StaleElementReferenceException --> The element was there before but 
+disappeared or reloaded before the action (click)
+
+    How to fix?
+    1) Add a sleep or wait before finding the element 
+
+3) InvalidSelectorException -> It is wrong xpath or css that caused the error
+
+    How to fix?
+    Validate the xpath in the chrome before using it
+[1:40 pm, 07/11/2021] BabusirTl: Dropdown
+
+1) dropdowns --> select tag 
+2) Each dropdown value --> option tag
+
+You can select / deselect dropdown value by 3 ways
+
+a) Using Text
+b) Using Attribute (Value)
+c) Using Index (starts at 0)
+
+Approach
+
+1) First identify the dropdown with select tag --> WebElement
+2) Convert the WebElement as Select class (for Webdriver to understand)
+3) Choose the method (text / value / index) to perform the action
+
+When to use which method
+
+1) Single language (EN) --> Prefer text
+2) Multiple languages (EN / FR / SP) --> Prefer value attribute
+3) Random selection --> Prefer Index
